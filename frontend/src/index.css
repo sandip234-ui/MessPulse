@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* Dark mode class strategy for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --color-brand-orange: #f97316;
+  --color-brand-orange-dark: #ea580c;
+  --color-brand-amber: #f59e0b;
+}
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-border-subtle: rgba(249, 115, 22, 0.12);
+  --glass-blur: 16px;
+  --glass-shadow: 0 8px 32px -4px rgba(249, 115, 22, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+  --glass-shadow-elevated: 0 16px 40px -8px rgba(249, 115, 22, 0.14), 0 4px 12px -2px rgba(0, 0, 0, 0.06);
+  --glass-chart-bg: rgba(255, 255, 255, 0.88);
+}
+
+html.dark,
+.dark,
+:root.dark {
+  --glass-bg: rgba(17, 24, 39, 0.72);
+  --glass-bg-hover: rgba(30, 41, 59, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-subtle: rgba(249, 115, 22, 0.15);
+  --glass-blur: 18px;
+  --glass-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.4), 0 0 24px -2px rgba(249, 115, 22, 0.05);
+  --glass-shadow-elevated: 0 20px 48px -8px rgba(0, 0, 0, 0.6), 0 0 32px 0 rgba(249, 115, 22, 0.08);
+  --glass-chart-bg: rgba(17, 24, 39, 0.90);
+}
+
+/* Base Ambient Background */
+html {
+  min-height: 100%;
+  color-scheme: light;
+  background-color: #faf8f5;
+}
+
+html.dark {
+  color-scheme: dark;
+  background-color: #0b0f19;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #1e293b;
+  background-color: #faf8f5;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(249, 115, 22, 0.06) 0px, transparent 45%),
+    radial-gradient(at 85% 20%, rgba(245, 158, 11, 0.05) 0px, transparent 40%),
+    radial-gradient(at 50% 80%, rgba(249, 115, 22, 0.04) 0px, transparent 50%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body,
+.dark body,
+body.dark {
+  color: #f1f5f9;
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(249, 115, 22, 0.08) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(245, 158, 11, 0.06) 0px, transparent 45%),
+    radial-gradient(at 50% 80%, rgba(234, 88, 12, 0.05) 0px, transparent 50%);
+}
+
+/* Glass Card Primitives */
+.glass-card {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card-elevated {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow-elevated);
+}
+
+.glass-card-opaque {
+  background-color: var(--glass-chart-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Glass Navbar Pill */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 30px -5px rgba(249, 115, 22, 0.08), 0 2px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+.dark .glass-nav {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 14px 35px -5px rgba(0, 0, 0, 0.5), 0 0 20px -2px rgba(249, 115, 22, 0.06);
+}
+
+/* Glass Input */
+.glass-input {
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  color: #1e293b;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: #f97316;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.dark .glass-input {
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+.dark .glass-input:focus {
+  background-color: rgba(30, 41, 59, 0.95);
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.3);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.6);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.5);
+}

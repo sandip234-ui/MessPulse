@@ -1,0 +1,44 @@
+{
+  "Monday": {
+    "breakfast": ["Idli", "Sambar", "Coconut Chutney", "Tea/Coffee"],
+    "lunch": ["Rice", "Dal Tadka", "Aloo Sabzi", "Roti", "Salad", "Buttermilk"],
+    "snacks": ["Bread Pakora", "Tea"],
+    "dinner": ["Rice", "Rajma", "Jeera Aloo", "Roti", "Papad"]
+  },
+  "Tuesday": {
+    "breakfast": ["Poha", "Boiled Egg", "Banana", "Tea/Coffee"],
+    "lunch": ["Rice", "Sambar", "Beans Curry", "Roti", "Salad", "Curd"],
+    "snacks": ["Vada Pav", "Tea"],
+    "dinner": ["Rice", "Chana Masala", "Mix Veg", "Roti", "Pickle"]
+  },
+  "Wednesday": {
+    "breakfast": ["Aloo Paratha", "Curd", "Pickle", "Tea/Coffee"],
+    "lunch": ["Rice", "Dal Fry", "Palak Paneer", "Roti", "Salad", "Raita"],
+    "snacks": ["Samosa", "Tea"],
+    "dinner": ["Rice", "Kadhi", "Aloo Gobi", "Roti", "Papad"]
+  },
+  "Thursday": {
+    "breakfast": ["Upma", "Coconut Chutney", "Boiled Egg", "Tea/Coffee"],
+    "lunch": ["Rice", "Arhar Dal", "Bhindi Fry", "Roti", "Salad", "Lassi"],
+    "snacks": ["Maggi", "Tea"],
+    "dinner": ["Rice", "Paneer Butter Masala", "Dal Makhni", "Roti", "Gulab Jamun"]
+  },
+  "Friday": {
+    "breakfast": ["Dosa", "Sambar", "Tomato Chutney", "Tea/Coffee"],
+    "lunch": ["Rice", "Moong Dal", "Egg Curry", "Roti", "Salad", "Curd"],
+    "snacks": ["Pakora", "Tea"],
+    "dinner": ["Rice", "Fish Curry", "Dal Fry", "Roti", "Papad"]
+  },
+  "Saturday": {
+    "breakfast": ["Puri", "Aloo Sabzi", "Pickle", "Tea/Coffee"],
+    "lunch": ["Biryani", "Raita", "Shorba", "Salad", "Papad"],
+    "snacks": ["Biscuits", "Tea"],
+    "dinner": ["Rice", "Chicken Curry", "Dal Fry", "Roti", "Ice Cream"]
+  },
+  "Sunday": {
+    "breakfast": ["Chole Bhature", "Pickle", "Lassi"],
+    "lunch": ["Jeera Rice", "Butter Dal", "Paneer Tikka", "Roti", "Salad", "Sweet"],
+    "snacks": ["Dhokla", "Tea"],
+    "dinner": ["Rice", "Mixed Dal", "Aloo Matar", "Roti", "Kheer"]
+  }
+}
