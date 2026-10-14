@@ -7,17 +7,17 @@ MessPulse is a production-grade, full-stack campus dining management and custome
 ## 🏛️ System Architecture
 
 ```
-                    ┌──────────────────────────────────┐
-                    │       React 19 + Vite Frontend    │
-                    │   Modern Glassmorphism UI / Tailwind  │
-                    └─────────────────┬────────────────┘
+                    ┌──────────────────────────────────────┐
+                    │       React 19 + Vite Frontend       │
+                    │   Modern Glassmorphism UI / Tailwind │
+                    └─────────────────┬────────────────────┘
                                       │
                                     Axios
                                       │ (HTTP-Only Secure Cookie)
-                    ┌─────────────────▼────────────────┐
-                    │      Node.js / Express REST API  │
+                    ┌─────────────────▼───────────────────┐
+                    │      Node.js / Express REST API     │
                     │  RBAC, Zod Validation, Rate Limiter │
-                    └─────────────────┬────────────────┘
+                    └─────────────────┬───────────────────┘
                                       │
                                   pg Pool
                                       │ (Parameterized Queries)
